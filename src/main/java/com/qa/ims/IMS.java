@@ -6,8 +6,15 @@ import org.apache.logging.log4j.Logger;
 import com.qa.ims.controller.Action;
 import com.qa.ims.controller.CrudController;
 import com.qa.ims.controller.CustomerController;
+import com.qa.ims.controller.Order_ItemController;
+import com.qa.ims.controller.OrdersController;
+import com.qa.ims.controller.ProductController;
 import com.qa.ims.persistence.dao.CustomerDAO;
+import com.qa.ims.persistence.dao.OrderDAO;
+import com.qa.ims.persistence.dao.Order_ItemDAO;
+import com.qa.ims.persistence.dao.ProductDAO;
 import com.qa.ims.persistence.domain.Domain;
+import com.qa.ims.persistence.domain.Order_item;
 import com.qa.ims.utils.DBUtils;
 import com.qa.ims.utils.Utils;
 
@@ -16,13 +23,26 @@ public class IMS {
 	public static final Logger LOGGER = LogManager.getLogger();
 
 	private final CustomerController customers;
+	private final ProductController products;
+	private final OrdersController orders;
+	private final Order_ItemController order_items;
 	private final Utils utils;
 
 	public IMS() {
 		this.utils = new Utils();
 		final CustomerDAO custDAO = new CustomerDAO();
 		this.customers = new CustomerController(custDAO, utils);
+		
+		final ProductDAO prodDAO = new ProductDAO();
+		this.products = new ProductController(prodDAO, utils);
+		
+		final OrderDAO ordDAO = new OrderDAO();
+		this.orders = new OrdersController(ordDAO, utils);
+		
+		final Order_ItemDAO order_itemDAO = new Order_ItemDAO();
+		this.order_items = new Order_ItemController(order_itemDAO, utils);
 	}
+	
 
 	public void imsSystem() {
 		LOGGER.info("Welcome to the Inventory Management System!");
@@ -49,9 +69,11 @@ public class IMS {
 			case CUSTOMER:
 				active = this.customers;
 				break;
-			case ITEM:
+			case ITEM:	
+				active = this.products;
 				break;
 			case ORDER:
+				active = this.orders;
 				break;
 			case STOP:
 				return;
