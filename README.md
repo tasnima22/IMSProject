@@ -1,5 +1,5 @@
 Coverage: 34%
-# Project Title
+# Inventory Management System (IMS) Project
 
 One Paragraph of project description goes here
 
