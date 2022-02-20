@@ -1,7 +1,16 @@
 Coverage: 34%
 # Inventory Management System (IMS) Project
 
-One Paragraph of project description goes here
+The aim of the IMS project is to build an application that an end user can interact with via a Command-Line Interface (CLI). The technological tools used for creating this IMS project were:
+
+•	Version Control System: Git
+•	Source Code Management: GitHub
+•	Kanban Board: Jira
+•	Database Management System: MySQL Server 5.7+ (local or GCP instance)
+•	Back-End Programming Language: Java
+•	Build Tool: Maven
+•	Unit Testing: JUnit
+
 
 ## Getting Started
 
