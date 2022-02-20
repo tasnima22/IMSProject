@@ -8,8 +8,7 @@ CREATE TABLE IF NOT EXISTS `ims`.`customers` (
     `customer_id` INT(11) NOT NULL AUTO_INCREMENT,
     `first_name` VARCHAR(40) DEFAULT NULL,
     `surname` VARCHAR(40) DEFAULT NULL,
-    PRIMARY KEY (`customer_id`)
-);
+    PRIMARY KEY (`customer_id`);
 
 CREATE TABLE IF NOT EXISTS `ims`.`orders` (
 `order_id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -36,3 +35,4 @@ PRIMARY KEY(`order_item_id`),
 FOREIGN KEY(`order_id`) REFERENCES `ims`.`orders`(`order_id`),
 FOREIGN KEY(`product_id`) REFERENCES `ims`.`products`(`product_id`)
 );
+
