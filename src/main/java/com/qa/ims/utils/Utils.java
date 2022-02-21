@@ -1,6 +1,8 @@
 package com.qa.ims.utils;
 
 import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -8,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Utils {
-	
+
 	private static final Logger LOGGER = LogManager.getLogger();
 
 	private final Scanner scanner;
@@ -68,20 +70,21 @@ public class Utils {
 		return input1;
 	}
 
-	
 	public Date getDate() {
+		SimpleDateFormat DateFor = new SimpleDateFormat("YYYY-MM-DD");
 		String input = null;
 		Date input1 = null;
 		do {
 			try {
 				input = getString();
-	//			input1 = Date.parse(input);
+				input1 = (Date) DateFor.parse(input);
 			} catch (NumberFormatException nfe) {
 				LOGGER.info("Error - Please enter a number");
+			} catch (ParseException e) {
+				e.printStackTrace();
 			}
 		} while (input1 == null);
 		return input1;
 	}
 
-	}
-
+}
