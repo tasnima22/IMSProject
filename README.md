@@ -1,4 +1,4 @@
-Coverage: 80%
+Coverage: 50.9%
 # Inventory Management System (IMS) Project
 
 The aim of the IMS project is to build an application that an end user can interact with via a Command-Line Interface (CLI). The technological tools used for creating this IMS project were:
@@ -108,31 +108,36 @@ There should be tests created for each class. These tests for my IMS project wer
 
 •Order_ItemControllerTest
 
-To run these tests, you need go on the test you wish to run and then right click and click on Run As >> JUnit Test
+JUnit is an open source unit testing for Java. To run these tests, you need go on the test you wish to run and then right click and click on Run As >> JUnit Test
 To see the coverage of the test, you need to right click and click on Coverage As >> JUnit Test
+ 
+```
+@Test
+	public void testCreate() {
+		final Customer created = new Customer(2L, "chris", "perrins");
+		assertEquals(created, DAO.create(created));
+	}
 ```
 
-```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-Mockito test 
+Mockito is an open source testing framework. It allows the creation of mock objects in automated unit tests. 
 
 ```
-Give an example
+@Test
+	public void testCreate() {
+		final String Product_name = "GTA 5";
+		final Double Product_cost = 32.90;
+		final Products created = new Products(Product_name, Product_cost);
+
+		Mockito.when(utils.getString()).thenReturn(Product_name);
+		Mockito.when(utils.getDouble()).thenReturn(Product_cost);
+		Mockito.when(dao.create(created)).thenReturn(created);
+
+		assertEquals(created, controller.create());
+
+		Mockito.verify(utils, Mockito.times(1)).getString();
+		Mockito.verify(utils, Mockito.times(1)).getDouble();
+		Mockito.verify(dao, Mockito.times(1)).create(created);
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
