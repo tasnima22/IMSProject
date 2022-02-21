@@ -83,6 +83,7 @@ This will print commands in the console and you should be able to choose what en
 ### Unit Tests 
 
 There should be tests created for each class. These tests for my IMS project were 
+
 • CustomerTest
 
 •ProductTest
@@ -115,6 +116,7 @@ To see the coverage of the test, you need to right click and click on Coverage A
 
 ### Integration Tests 
 Explain what these tests test, why and how to run them
+Mockito test 
 
 ```
 Give an example
