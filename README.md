@@ -1,4 +1,4 @@
-Coverage: 34%
+Coverage: 80%
 # Inventory Management System (IMS) Project
 
 The aim of the IMS project is to build an application that an end user can interact with via a Command-Line Interface (CLI). The technological tools used for creating this IMS project were:
@@ -31,7 +31,7 @@ https://tasnima23.atlassian.net/jira/software/projects/IMS/boards/1/backlog
 What things you need to install the software and how to install them
 
 ```
-Give examples
+EXAMPLE
 ```
 
 ### Installing
@@ -49,6 +49,12 @@ Following the installation of the software, I created a database in the local my
 • Open a new file for the IMS Project 
 
 • Create a new database called 'ims'
+
+```
+DROP SCHEMA IMS;
+CREATE DATABASE IF NOT EXISTS IMS;
+USE IMS;
+```
 
 End with an example of getting some data out of the system or using it for a little demo
 
