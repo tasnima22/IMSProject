@@ -80,14 +80,37 @@ To ensure the system is working correctly for all the CRUD functionalities, you 
 This will print commands in the console and you should be able to choose what entity you would like to select from the database
 
 
-Right click on the class 
-
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+There should be tests created for each class. These tests for my IMS project were 
+• CustomerTest
 
+•ProductTest
+
+•OrderTest
+
+•Order_itemTest
+
+•CustomerDAOTest
+
+•ProductDAOTest
+
+•OrderDAOTest
+
+•Order_itemDAOTest
+
+•CustomerControllerTest
+
+•ProductControllerTest
+
+•OrderControllerTest
+
+•Order_ItemControllerTest
+
+To run these tests, you need go on the test you wish to run and then right click and click on Run As >> JUnit Test
+To see the coverage of the test, you need to right click and click on Coverage As >> JUnit Test
 ```
-![image](https://user-images.githubusercontent.com/64172539/154982139-21ac9b67-2369-401c-a263-8713a99cad55.png)
+
 ```
 
 ### Integration Tests 
