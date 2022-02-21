@@ -22,6 +22,10 @@ The aim of the IMS project is to build an application that an end user can inter
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+I used Jira to plan my project 
+
+https://tasnima23.atlassian.net/jira/software/projects/IMS/boards/1/backlog
+
 ### Prerequisites
 
 What things you need to install the software and how to install them
@@ -34,17 +38,17 @@ Give examples
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Following the installation of the software, I created a database in the local mySQL server
 
-```
-Give the example
-```
+• Open up the mySQL workbench application
 
-And repeat
+• Select Local instance mySQL under MySQL Connections
 
-```
-until finished
-```
+• Enter the credentials
+
+• Open a new file for the IMS Project 
+
+• Create a new database called 'ims'
 
 End with an example of getting some data out of the system or using it for a little demo
 
