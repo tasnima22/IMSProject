@@ -31,7 +31,18 @@ https://tasnima23.atlassian.net/jira/software/projects/IMS/boards/1/backlog
 What things you need to install the software and how to install them
 
 ```
-EXAMPLE
+Eclipse IDE for Java Developers 
+•To install this, you need to click on this link http://www.eclipse.org/downloads
+
+JAVA - Java SE Development Kit 
+•To install this, you need to click on this link https://www.oracle.com/uk/java/technologies/javase/javase-jdk8-downloads.html
+
+Database - MySQL 
+•To install this, you need to click on this link https://dev.mysql.com/downloads/windows/installer/8.0.html
+
+
+Maven - Apache Maven 
+• To install this, you need to click on this link https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/apache/
 ```
 
 ### Installing
@@ -56,18 +67,27 @@ CREATE DATABASE IF NOT EXISTS IMS;
 USE IMS;
 ```
 
+Also open up Eclipse IDE for Java Developers and check the pom.xml file 
+Save the SQL database into the folder where your IMS Project is saved in Eclipse
+
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
 Explain how to run the automated tests for this system. Break down into which tests and what they do
 
+To ensure the system is working correctly for all the CRUD functionalities, you need to right click on the runner and click on Run As >> Java Application
+This will print commands in the console and you should be able to choose what entity you would like to select from the database
+
+
+Right click on the class 
+
 ### Unit Tests 
 
 Explain what these tests test, why and how to run them
 
 ```
-Give an example
+![image](https://user-images.githubusercontent.com/64172539/154982139-21ac9b67-2369-401c-a263-8713a99cad55.png)
 ```
 
 ### Integration Tests 
