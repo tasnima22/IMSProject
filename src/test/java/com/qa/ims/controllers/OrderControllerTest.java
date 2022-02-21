@@ -33,7 +33,7 @@ public class OrderControllerTest {
 	@Test
 	public void testCreate() {
 		final Long customer_id = 1L;
-		final Date date_of_order = 2022-02-19;
+		final Date date_of_order = new Date(2022-02-19);
 		final Double totalcost = 25.50;
 		final Orders created = new Orders(customer_id, date_of_order, totalcost);
 		
@@ -52,7 +52,7 @@ public class OrderControllerTest {
 	@Test 
 	public void testReadAll() {
 		List<Orders> order = new ArrayList<>();
-		order.add(new Orders(4L, 4L, 2022-02-18, 34.99));
+		order.add(new Orders(4L, 4L, new Date(2022-02-18), 34.99));
 		
 		Mockito.when(dao.readAll()).thenReturn(order);
 		
